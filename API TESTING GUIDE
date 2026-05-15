@@ -340,7 +340,7 @@ curl -X GET "http://localhost:3000/api/organizations?sort_by=date&order=asc"
 Що перевіряти:
 - При desc: перші організації мають дату створення ПІЗНІШУ
 - При asc: перші організації мають дату створення РАНІШ
-- Дати йдуть в логічному порядку (2024-05-15, 2024-05-14, 2024-05-13...)
+- Дати йдуть в логічному порядку (2026-05-15, 2026-05-14, 2026-05-13...)
 
 
 ТЕ2.8 - Пагінація (поділ на сторінки)
@@ -452,7 +452,7 @@ curl -X GET "http://localhost:3000/api/organizations/101" \
   "cover_url": "https://cdn.example.com/cover1.png",
   "category": "Кафе та ресторани",
   "status": "approved",
-  "created_at": "2024-01-15",
+  "created_at": "2026-01-15",
   "created_by_user_id": 5,
   "contacts": [
     {"type": "phone", "value": "+380501234567"},
@@ -474,7 +474,7 @@ curl -X GET "http://localhost:3000/api/organizations/101" \
     {
       "user": "Олексій",
       "text": "Дуже смачно!",
-      "date": "2024-05-12",
+      "date": "2026-05-12",
       "rating": 5
     }
   ]
@@ -567,7 +567,7 @@ curl -X POST "http://localhost:3000/api/organizations" \
   "id": 150,
   "name": "Нова Клініка",
   "status": "pending",
-  "created_at": "2024-05-15T19:39:00Z",
+  "created_at": "2026-05-15T19:39:00Z",
   "created_by_user_id": 2
 }
 
@@ -728,7 +728,7 @@ curl -X POST "http://localhost:3000/api/organizations/101/reviews" \
   "user_id": 2,
   "rating_value": 5,
   "comment": "Чудовий сервіс!",
-  "created_at": "2024-05-15T19:39:00Z"
+  "created_at": "2026-05-15T19:39:00Z"
 }
 
 
@@ -1046,7 +1046,7 @@ curl -X GET "http://localhost:3000/api/admin/moderation" \
       "name": "Нова Клініка",
       "status": "pending",
       "type": "organization",
-      "created_at": "2024-05-15",
+      "created_at": "2026-05-15",
       "created_by": "user@test.com"
     },
     {
@@ -1054,7 +1054,7 @@ curl -X GET "http://localhost:3000/api/admin/moderation" \
       "status": "pending",
       "type": "comment",
       "text": "Чудовий сервіс!",
-      "created_at": "2024-05-15"
+      "created_at": "2026-05-15"
     }
   ],
   "pagination": {"total": 45}
@@ -1105,7 +1105,7 @@ curl -X PATCH "http://localhost:3000/api/admin/organizations/150/status" \
   {
     "id": 150,
     "status": "approved",
-    "updated_at": "2024-05-15T20:00:00Z"
+    "updated_at": "2026-05-15T20:00:00Z"
   }
 - Статус в БД змінено з "pending" на "approved"
 - Організація тепер видима в публічному API (GET /organizations)
@@ -1182,7 +1182,7 @@ curl -X PATCH "http://localhost:3000/api/admin/comments/5001/status" \
   {
     "id": 5001,
     "status": "approved",
-    "published_at": "2024-05-15T20:00:00Z"
+    "published_at": "2026-05-15T20:00:00Z"
   }
 - Коментар тепер видио в публічному API (GET /organizations/{id})
 - Користувач отримав сповіщення про схвалення
