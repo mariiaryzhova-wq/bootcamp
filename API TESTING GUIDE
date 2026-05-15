@@ -4,8 +4,8 @@
 
 ПРОЄКТ: Каталог організацій з jurydychnymy vymaganyamy
 ВЕРСІЯ ДОКУМЕНТУ: 1.0
-ДАТА: 15 травня 2024
-РОЗРОБНИК: QA Team
+ДАТА: 15 травня 2026
+РОЗРОБНИК: Рижова Марія
 МЕТА: Забезпечити коректну роботу всіх компонентів API перед запуском в production
 
 ================================================================================
@@ -420,7 +420,7 @@ curl -X GET "http://localhost:3000/api/organizations/101" \
   * cover_url - адреса обкладинки
   * category - текст (категорія)
   * status - текст ("approved" для публічного доступу)
-  * created_at - дата створення (формат: 2024-05-15)
+  * created_at - дата створення (формат: 2026-05-15)
   * created_by_user_id - число (ID користувача який додав)
 
 - Поле "contacts" - масив об'єктів з контактною інформацією:
@@ -1128,7 +1128,7 @@ curl -X PATCH "http://localhost:3000/api/admin/organizations/150/status" \
   {
     "id": 150,
     "status": "rejected",
-    "updated_at": "2024-05-15T20:00:00Z"
+    "updated_at": "2026-05-15T20:00:00Z"
   }
 - Статус змінено на "rejected"
 - Організація видалена з публічного API (не видна користувачам)
@@ -1416,13 +1416,13 @@ TEST SUITE 15: ЧАСОВІ ПОЯСИ
 2. Перевірте статус is_open в різних часових поясах:
 
 # Час 08:59 UTC+2 (за 1 хвилину до відкриття)
-curl -X GET "http://localhost:3000/api/organizations/101?current_time=2024-05-15T08:59:00%2B02:00"
+curl -X GET "http://localhost:3000/api/organizations/101?current_time=2026-05-15T08:59:00%2B02:00"
 
 # Час 09:00 UTC+2 (рівно при відкритті)
-curl -X GET "http://localhost:3000/api/organizations/101?current_time=2024-05-15T09:00:00%2B02:00"
+curl -X GET "http://localhost:3000/api/organizations/101?current_time=2026-05-15T09:00:00%2B02:00"
 
 # Час 21:00 UTC+2 (рівно при закритті)
-curl -X GET "http://localhost:3000/api/organizations/101?current_time=2024-05-15T21:00:00%2B02:00"
+curl -X GET "http://localhost:3000/api/organizations/101?current_time=2026-05-15T21:00:00%2B02:00"
 
 Що перевіряти:
 - При 08:59: is_open = false (ще закрита)
@@ -1631,7 +1631,7 @@ curl -X PATCH "http://localhost:3000/api/admin/users/3/block" \
 КІНЕЦЬ ДОКУМЕНТУ
 ================================================================================
 
-Документ створено: 15 травня 2024
+Документ створено: 15 травня 2026
 Версія: 1.0
-Автор: QA Team
-Остання редакція: 15 травня 2024
+Автор: Рижова Марія
+Остання редакція: 15 травня 2026
